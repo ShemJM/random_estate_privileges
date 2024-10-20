@@ -1,0 +1,7 @@
+on_startup = {
+	events
+	{
+		randomprivilege.1
+        randomvalues.1
+	}
+}

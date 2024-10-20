@@ -1,0 +1,270 @@
+namespace = randomprivilege
+country_event = {
+	id = randomprivilege.1
+	hidden = yes
+	is_triggered_only = yes
+	trigger = {
+		is_year = 1444
+		NOT = {
+			tag = REB
+		}
+	}
+	immediate = {
+		random_list = {
+			1 = {
+				set_variable = {
+					which = num_privileges
+					value = 1
+				}
+			}
+			1 = {
+				set_variable = {
+					which = num_privileges
+					value = 2
+				}
+			}
+			1 = {
+				set_variable = {
+					which = num_privileges
+					value = 3
+				}
+			}
+		}
+		# Nobility Estate
+		if = {
+			limit = {
+				has_estate = estate_nobles
+			}
+			random_list = {
+				1 = {
+					set_estate_privilege = estate_nobles_land_rights
+				}
+				1 = {
+					set_estate_privilege = estate_nobles_nobility_primacy
+				}
+				1 = {
+					set_estate_privilege = estate_nobles_officer_corp
+				}
+				1 = {
+					set_estate_privilege = estate_nobles_levies
+				}
+				1 = {
+					set_estate_privilege = estate_nobles_advisors
+				}
+				1 = {
+					set_estate_privilege = estate_nobles_right_of_counsel
+				}
+				1 = {
+					set_estate_privilege = estate_nobles_french_strong_duchies
+				}
+				1 = {
+					set_estate_privilege = estate_nobles_supremacy_over_crown
+				}
+				1 = {
+					set_estate_privilege = estate_nobles_junker_primacy
+				}
+				1 = {
+					set_estate_privilege = estate_nobles_strong_duchies
+				}
+				1 = {
+					set_estate_privilege = estate_nobles_golden_liberty
+				}
+				1 = {
+					set_estate_privilege = estate_nobles_veto_heir_apparent
+				}
+				1 = {
+					set_estate_privilege = estate_nobles_monopoly_of_metals
+				}
+				1 = {
+					set_estate_privilege = estate_nobles_monopoly_of_livestock
+				}
+				1 = {
+					set_estate_privilege = estate_nobles_monopoly_of_gems
+				}
+				1 = {
+					set_estate_privilege = estate_nobles_statutory_rights
+				}
+				1 = {
+					set_estate_privilege = estate_nobles_command_of_the_military
+				}
+				1 = {
+					set_estate_privilege = estate_nobles_better_integration
+				}
+				1 = {
+					set_estate_privilege = estate_nobles_nobles_instead_of_royal_court
+				}
+				1 = {
+					set_estate_privilege = estate_nobles_religious_conscription
+				}
+				1 = {
+					set_estate_privilege = estate_nobles_leidang_mass_conscription
+				}
+				1 = {
+					set_estate_privilege = estate_nobles_leidang_elite_conscription
+				}
+				1 = {
+					set_estate_privilege = estate_nobles_early_serfdom
+				}
+				1 = {
+					set_estate_privilege = estate_nobles_legalized_serfdom
+				}
+				1 = {
+					set_estate_privilege = estate_nobles_total_serfdom
+				}
+				1 = {
+					set_estate_privilege = estate_nobles_restricted_serfdom
+				}
+				1 = {
+					set_estate_privilege = estate_nobles_devastating_serfdom
+				}
+				1 = {
+					set_estate_privilege = estate_nobles_increased_peasant_freedom
+				}
+				1 = {
+					set_estate_privilege = estate_nobles_peasant_liberation
+				}
+				1 = {
+					set_estate_privilege = estate_nobles_rynda
+				}
+				1 = {
+					set_estate_privilege = estate_nobles_landed_army
+				}
+				1 = {
+					set_estate_privilege = estate_nobles_factionalist_nobility
+				}
+				1 = {
+					set_estate_privilege = estate_nobles_consolidated_noble_contracts
+				}
+				1 = {
+					set_estate_privilege = estate_nobles_english_villeinage
+				}
+				1 = {
+					set_estate_privilege = estate_nobles_english_copyhold_tenure
+				}
+				1 = {
+					set_estate_privilege = estate_nobles_development_of_castles
+				}
+				1 = {
+					set_estate_privilege = estate_nobles_statesman_servitude
+				}
+				1 = {
+					set_estate_privilege = estate_nobles_royal_court_tasks
+				}
+				1 = {
+					set_estate_privilege = estate_nobles_diet_right
+				}
+				1 = {
+					set_estate_privilege = estate_nobles_force_conscription
+				}
+				1 = {
+					set_estate_privilege = estate_nobles_noble_officer_right
+				}
+				1 = {
+					set_estate_privilege = estate_nobles_expedition_rights
+				}
+				1 = {
+					set_estate_privilege = estate_nobles_highland_fortifications
+				}
+				1 = {
+				}
+			}
+			# Clergy Estate
+			if = {
+				limit = {
+					has_estate = estate_church
+				}
+				random_list = {
+					1 = {
+						set_estate_privilege = estate_church_land_rights
+					}
+					1 = {
+						set_estate_privilege = estate_church_papal_emissary
+					}
+					1 = {
+						set_estate_privilege = estate_church_religious_state
+					}
+					1 = {
+						set_estate_privilege = estate_church_administrative_privileges
+					}
+					1 = {
+					}
+					# Add more clergy privileges as desired
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = num_privileges
+							value >= 2
+						}
+					}
+					random_list = {
+						1 = {
+							set_estate_privilege = estate_church_land_rights
+						}
+						1 = {
+							set_estate_privilege = estate_church_papal_emissary
+						}
+						1 = {
+							set_estate_privilege = estate_church_religious_state
+						}
+						1 = {
+							set_estate_privilege = estate_church_administrative_privileges
+						}
+						1 = {
+						}
+					}
+					# Add more clergy privileges as desired
+				}
+			}
+			# Burghers Estate
+			if = {
+				limit = {
+					has_estate = estate_burghers
+				}
+				random_list = {
+					1 = {
+						set_estate_privilege = estate_burghers_land_rights
+					}
+					1 = {
+						set_estate_privilege = estate_burghers_patronage_of_the_arts
+					}
+					1 = {
+						set_estate_privilege = estate_burghers_free_enterprise
+					}
+					1 = {
+						set_estate_privilege = estate_burghers_land_of_commerce
+					}
+					1 = {
+					}
+					# Add more burgher privileges as desired
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = num_privileges
+							value >= 2
+						}
+					}
+					random_list = {
+						1 = {
+							set_estate_privilege = estate_burghers_land_rights
+						}
+						1 = {
+							set_estate_privilege = estate_burghers_patronage_of_the_arts
+						}
+						1 = {
+							set_estate_privilege = estate_burghers_free_enterprise
+						}
+						1 = {
+							set_estate_privilege = estate_burghers_land_of_commerce
+						}
+						1 = {
+						}
+						# Add more burgher privileges as desired
+					}
+				}
+			}
+			# Add similar blocks for other estates like Cossacks, Dhimmi, Brahmins, etc.
+		}
+	}
+}

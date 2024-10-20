@@ -1,0 +1,5 @@
+l_english:
+ random_privileges.1.title: "Random Estate Privileges"
+ random_privileges.1.desc: "Assign random estate privileges to countries at game start."
+ random_marriages.1.title: "Random Royal Marriages"
+ random_marriages.1.desc: "Your monarch has entered into a royal marriage."
