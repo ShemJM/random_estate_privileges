@@ -3,6 +3,138 @@ on_startup = {
 	{
 		randomprivilege.1
 	}
+	if = {
+		limit = {
+			is_part_of_hre = yes
+			is_subject = no
+		}
+		random_neighbor_country = {
+			if = {
+				limit = {
+					is_part_of_hre = yes
+					army_balance = {
+						who = ROOT
+						value = 0.8
+					}
+				}
+				random_list = {
+					5 = {
+						declare_war_with_cb = {
+							casus_belli = cb_humiliate_rotw
+							who = ROOT
+						}
+					}
+					5 = {
+						declare_war_with_cb = {
+							casus_belli = cb_trade_conflict
+							who = ROOT
+						}
+					}
+					90 = {
+					}
+				}
+			}
+		}
+	}
+	every_owned_province = {
+		random_list = {
+			20 = {
+				add_devastation = 10
+			}
+			20 = {
+				add_devastation = 20
+			}
+			20 = {
+				add_devastation = 5
+			}
+			20 = {
+				add_devastation = 30
+			}
+			20 = {
+			}
+		}
+		random_list = {
+			20 = {
+				add_random_development = 1
+			}
+			20 = {
+				add_random_development = -1
+			}
+			60 = {
+			}
+		}
+	}
+	random_list = {
+		20 = {
+			spawn_rebels = {
+				size = 8
+				type = noble_rebels
+			}
+		}
+		80 = {
+		}
+	}
+	random_list = {
+		5 = {
+			add_stability = -2
+		}
+		10 = {
+			add_stability = -1
+		}
+		10 = {
+			add_stability = 1
+		}
+		5 = {
+			add_stability = 2
+		}
+		70 = {
+		}
+	}
+	every_known_country = {
+		random_list = {
+			1 = {
+				add_trust = {
+					who = ROOT
+					value = 10
+					mutual = yes
+				}
+			}
+			1 = {
+				add_trust = {
+					who = ROOT
+					value = -10
+					mutual = yes
+				}
+			}
+			1 = {
+				add_trust = {
+					who = ROOT
+					value = 5
+					mutual = yes
+				}
+			}
+			1 = {
+				add_trust = {
+					who = ROOT
+					value = -5
+					mutual = yes
+				}
+			}
+			1 = {
+			}
+		}
+	}
+	if = {
+		limit = {
+			tag = MOS
+		}
+		random_owned_province = {
+			spawn_rebels = {
+				type = pretender_rebels
+				size = 10
+			}
+		}
+	}
 }
 
 # province

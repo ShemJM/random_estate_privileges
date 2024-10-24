@@ -1,0 +1,20 @@
+country_decisions = {
+	convert_to_orthodox = {
+		potential = {
+			dominant_religion = orthodox
+			NOT = {
+				religion = orthodox
+			}
+		}
+		allow = {
+			dominant_religion = orthodox
+			stability = 2
+			is_subject = no
+			consort_religion = orthodox
+		}
+		effect = {
+			change_religion = orthodox
+			add_stability = -1
+		}
+	}
+}
